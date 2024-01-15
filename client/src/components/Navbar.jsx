@@ -42,7 +42,7 @@ const Navbar = () => {
         <ul className="navbar-nav mb-2 mb-lg-0">
           {" "}
           {/* remove ms-auto */}
-          <li className="nav-item dropdown">
+          <li className="nav-item dropdown w-50">
             <a
               className="nav-link dropdown-toggle"
               href="#"
@@ -53,7 +53,7 @@ const Navbar = () => {
             >
               Login
             </a>
-            <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
                 <a className="dropdown-item text-center" href="#">
                   Profile
