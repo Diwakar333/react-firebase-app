@@ -1,14 +1,14 @@
 import React from "react";
 
-const Card = (props) => {
+const Card = ({path, title}) => {
   return (
     
       <div className="col mb-5">
         <div className="card" style={{ width: "18rem" }}>
           <img
-            src={props.src}
+            src={path}
             className="card-img-top"
-            alt="image"
+            alt={title}
           />
         </div>
       </div>
