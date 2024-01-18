@@ -2,6 +2,7 @@ import { useEffect, useState, useReducer, useMemo, useContext } from "react";
 import Card from "./components/Card";
 import Layout from "./components/Layout";
 import { Context } from "./Context";
+import { app } from "./lib/firebase.config";
 // import Navbar from "./components/Navbar";
 // import Upload from "./components/Upload";
 
@@ -25,6 +26,10 @@ function App() {
       state.items.lenght > 1 ? "s" : ""
     }`;
   }, [state.items]);
+
+  useEffect(() =>{
+    app()
+  }, [])
 
   // useEffect(() =>{
   //   setCount()
