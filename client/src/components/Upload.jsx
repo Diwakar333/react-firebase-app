@@ -1,6 +1,8 @@
 import React, { useMemo, useContext } from 'react'
 import { Context } from '../Context'
+import Firestore from '../handlers/firestore';
 
+const {writeDoc} = Firestore;
 const Preview = () =>{
   const { state} = useContext(Context);
   const {inputs} = state;
@@ -25,7 +27,7 @@ const Upload = ({}) => {
   dispatch({ type: "setInputs", payload: { value: e } });
 const handleOnSubmit = (e) => {
   e.preventDefault();
-  // setItems([inputs.path, ...items]);
+ writeDoc(state.inputs, "stocks").then(console.log)
   dispatch({ type: "setItem", payload: { path: state.inputs } });
   // setInputs({title:null, file:null, path: null})
   dispatch({ type: "isCollapsed", payload: { bool:false } });
